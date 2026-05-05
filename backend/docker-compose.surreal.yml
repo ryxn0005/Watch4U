@@ -1,0 +1,7 @@
+services:
+  surrealdb:
+    image: surrealdb/surrealdb:latest
+    ports:
+      - "8080:8000"
+    command: start --log info --user root --pass root memory
+    restart: unless-stopped

@@ -9,6 +9,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.core.config import get_settings
+from app.db import init_surreal, shutdown_surreal
 from app.routers import health, triage
 
 logging.basicConfig(
@@ -23,8 +24,9 @@ settings = get_settings()
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     log.info("Watch4U backend starting (env=%s)", settings.app_env)
-    # TODO: warm up models, connect to vector DB, etc.
+    await init_surreal(app, settings)
     yield
+    await shutdown_surreal(app)
     log.info("Watch4U backend shutting down")
 
 
@@ -37,7 +39,7 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=settings.cors_origins,
+    allow_origins=settings.cors_allow_origins(),
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
