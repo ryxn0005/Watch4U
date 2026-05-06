@@ -10,7 +10,6 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from app.core.config import get_settings
 from app.db import init_surreal, shutdown_surreal
-<<<<<<< HEAD
 from app.routers import fall_detection, health, rag, triage
 
 logging.basicConfig(
