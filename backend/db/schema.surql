@@ -33,3 +33,23 @@ DEFINE FIELD IF NOT EXISTS clip_uri ON fall_event TYPE option<string>;
 DEFINE FIELD IF NOT EXISTS payload ON fall_event TYPE option<object>;
 
 DEFINE INDEX IF NOT EXISTS idx_fall_resident_time ON fall_event FIELDS resident, detected_at;
+
+-- RAG Document Storage
+DEFINE TABLE IF NOT EXISTS document SCHEMAFULL;
+DEFINE FIELD IF NOT EXISTS content ON document TYPE string;
+DEFINE FIELD IF NOT EXISTS embedding ON document TYPE option<array<float>>;
+DEFINE FIELD IF NOT EXISTS source ON document TYPE string;
+DEFINE FIELD IF NOT EXISTS language ON document TYPE string DEFAULT 'en';
+DEFINE FIELD IF NOT EXISTS metadata ON document TYPE option<object>;
+DEFINE FIELD IF NOT EXISTS created_at ON document TYPE datetime DEFAULT time::now();
+DEFINE FIELD IF NOT EXISTS updated_at ON document TYPE datetime DEFAULT time::now();
+
+-- HNSW index for vector similarity search (768 dims for PhoBERT)
+DEFINE INDEX IF NOT EXISTS hnsw_document_embedding ON document FIELDS embedding
+  HNSW DIMENSION 768
+  DIST COSINE
+  EFC 150
+  M 12;
+
+-- Index for language-based filtering
+DEFINE INDEX IF NOT EXISTS idx_document_language ON document FIELDS language;
