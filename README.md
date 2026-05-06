@@ -34,29 +34,39 @@ make up
 make backend       # FastAPI on http://localhost:8000
 make streamlit     # Streamlit on http://localhost:8501
 
+# Start with SurrealDB (required for RAG vector search)
+make surreal-up    # SurrealDB on http://localhost:8080
+make backend       # FastAPI with SurrealDB connection
+
 # Restart everything (stop + rebuild + start)
 make restart
 
 # Stop everything
 make down
+make surreal-down  # Stop SurrealDB separately
 ```
 
 ## Team & Component Ownership
 
-| Component             | Owner(s)        | Path                                   |
-|-----------------------|-----------------|----------------------------------------|
-| RAG workflow          | Ryan            | `backend/app/services/rag/`            |
-| Triage logic          | Jayce           | `backend/app/services/triage/`         |
-| Fall detection (CV)   | Darrel          | `backend/app/services/fall_detection/` |
-| Wi-Fi detection       | Ryan            | `backend/app/services/wifi_detection/` |
-| Backend setup         | Ryan, Muhamad   | `backend/`                             |
-| Synthetic data + prep | Affan           | `data/`                                |
+| Component             | Owner(s)        | Path                                   | Database                |
+|-----------------------|-----------------|----------------------------------------|-------------------------|
+| RAG workflow          | Ryan            | `backend/app/services/rag/`            | SurrealDB (vector)      |
+| Triage logic          | Jayce           | `backend/app/services/triage/`         | SurrealDB               |
+| Fall detection (CV)   | Darrel          | `backend/app/services/fall_detection/` | -                       |
+| Wi-Fi detection       | Ryan            | `backend/app/services/wifi_detection/` | SurrealDB               |
+| Backend setup         | Ryan, Muhamad   | `backend/`                             | SurrealDB               |
+| Synthetic data + prep | Affan           | `data/`                                | -                       |
 
-## Roadmap
+## Database Architecture
 
-- **Phase 1 (now):** Streamlit prototype + FastAPI backend
-- **Phase 2 (later):** Replace Streamlit with Next.js web app in `frontend/`
-- The backend (`backend/app/services/`) stays unchanged across phases.
+All persistent data is stored in **SurrealDB**, a multi-model database with native vector search support:
+
+- **Residents** — Patient profiles, emergency contacts, care plans
+- **Fall Events** — Detected falls with severity, location, timestamps
+- **RAG Documents** — Medical knowledge with 768-dim vector embeddings (HNSW index)
+- **Sensor Data** — Wi-Fi CSI readings and CV detection events
+
+SurrealDB runs via Docker Compose (`backend/docker-compose.surreal.yml`) and is accessible at `ws://localhost:8080`.
 
 ## Documents
 
