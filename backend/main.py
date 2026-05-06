@@ -10,7 +10,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from app.core.config import get_settings
 from app.db import init_surreal, shutdown_surreal
-from app.routers import health, triage
+from app.routers import health, rag, triage
 
 logging.basicConfig(
     level=logging.INFO,
@@ -47,10 +47,10 @@ app.add_middleware(
 
 app.include_router(health.router)
 app.include_router(triage.router, prefix="/api/triage")
+app.include_router(rag.router, prefix="/api/rag")
 # TODO: include feature routers as they land
 # app.include_router(fall_detection.router, prefix="/api/fall-detection")
 # app.include_router(wifi_detection.router, prefix="/api/wifi-detection")
-# app.include_router(rag.router,            prefix="/api/rag")
 
 
 if __name__ == "__main__":
