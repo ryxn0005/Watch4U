@@ -1,0 +1,277 @@
+[
+    {
+        "id": "PCF7CF",
+        "name": "Synthetic Patient 740",
+        "age": 83,
+        "sex": "female",
+        "language": "Bilingual (VI/EN)",
+        "conditions": [
+            "osteoporosis",
+            "arthritis"
+        ],
+        "medications": [
+            "metformin",
+            "aspirin"
+        ],
+        "functional_status": {
+            "mobility": "bedridden",
+            "cognition": "normal"
+        },
+        "previous_falls": 3,
+        "emergency_contacts": [
+            {
+                "name": "Primary Carer",
+                "relationship": "family",
+                "phone": "0400000000"
+            }
+        ],
+        "risk_level": "high"
+    },
+    {
+        "id": "PC964C",
+        "name": "Synthetic Patient 267",
+        "age": 65,
+        "sex": "male",
+        "language": "Bilingual (VI/EN)",
+        "conditions": [
+            "cardiovascular disease",
+            "stroke"
+        ],
+        "medications": [],
+        "functional_status": {
+            "mobility": "bedridden",
+            "cognition": "severe impairment"
+        },
+        "previous_falls": 1,
+        "emergency_contacts": [
+            {
+                "name": "Primary Carer",
+                "relationship": "family",
+                "phone": "0400000000"
+            }
+        ],
+        "risk_level": "high"
+    },
+    {
+        "id": "P13F18",
+        "name": "Synthetic Patient 839",
+        "age": 60,
+        "sex": "female",
+        "language": "Vietnamese",
+        "conditions": [
+            "stroke"
+        ],
+        "medications": [
+            "sedatives",
+            "aspirin"
+        ],
+        "functional_status": {
+            "mobility": "assisted",
+            "cognition": "normal"
+        },
+        "previous_falls": 1,
+        "emergency_contacts": [
+            {
+                "name": "Primary Carer",
+                "relationship": "family",
+                "phone": "0400000000"
+            }
+        ],
+        "risk_level": "high"
+    },
+    {
+        "id": "P2E5E2",
+        "name": "Synthetic Patient 445",
+        "age": 65,
+        "sex": "female",
+        "language": "Bilingual (VI/EN)",
+        "conditions": [
+            "cardiovascular disease",
+            "hypertension",
+            "stroke"
+        ],
+        "medications": [
+            "metformin",
+            "lisinopril"
+        ],
+        "functional_status": {
+            "mobility": "bedridden",
+            "cognition": "mild impairment"
+        },
+        "previous_falls": 1,
+        "emergency_contacts": [
+            {
+                "name": "Primary Carer",
+                "relationship": "family",
+                "phone": "0400000000"
+            }
+        ],
+        "risk_level": "high"
+    },
+    {
+        "id": "P85EF2",
+        "name": "Synthetic Patient 726",
+        "age": 78,
+        "sex": "male",
+        "language": "Vietnamese",
+        "conditions": [
+            "hypertension",
+            "arthritis",
+            "diabetes"
+        ],
+        "medications": [
+            "metformin"
+        ],
+        "functional_status": {
+            "mobility": "independent",
+            "cognition": "severe impairment"
+        },
+        "previous_falls": 1,
+        "emergency_contacts": [
+            {
+                "name": "Primary Carer",
+                "relationship": "family",
+                "phone": "0400000000"
+            }
+        ],
+        "risk_level": "high"
+    },
+    {
+        "id": "PCA958",
+        "name": "Synthetic Patient 188",
+        "age": 83,
+        "sex": "male",
+        "language": "Bilingual (VI/EN)",
+        "conditions": [
+            "cardiovascular disease",
+            "osteoporosis",
+            "arthritis"
+        ],
+        "medications": [
+            "sedatives",
+            "warfarin"
+        ],
+        "functional_status": {
+            "mobility": "independent",
+            "cognition": "severe impairment"
+        },
+        "previous_falls": 1,
+        "emergency_contacts": [
+            {
+                "name": "Primary Carer",
+                "relationship": "family",
+                "phone": "0400000000"
+            }
+        ],
+        "risk_level": "high"
+    },
+    {
+        "id": "PFDCA0",
+        "name": "Synthetic Patient 795",
+        "age": 83,
+        "sex": "female",
+        "language": "Vietnamese",
+        "conditions": [
+            "stroke",
+            "diabetes"
+        ],
+        "medications": [
+            "metformin",
+            "warfarin"
+        ],
+        "functional_status": {
+            "mobility": "independent",
+            "cognition": "mild impairment"
+        },
+        "previous_falls": 2,
+        "emergency_contacts": [
+            {
+                "name": "Primary Carer",
+                "relationship": "family",
+                "phone": "0400000000"
+            }
+        ],
+        "risk_level": "high"
+    },
+    {
+        "id": "P60564",
+        "name": "Synthetic Patient 101",
+        "age": 65,
+        "sex": "female",
+        "language": "English",
+        "conditions": [
+            "diabetes",
+            "arthritis"
+        ],
+        "medications": [
+            "sedatives",
+            "metformin"
+        ],
+        "functional_status": {
+            "mobility": "independent",
+            "cognition": "severe impairment"
+        },
+        "previous_falls": 0,
+        "emergency_contacts": [
+            {
+                "name": "Primary Carer",
+                "relationship": "family",
+                "phone": "0400000000"
+            }
+        ],
+        "risk_level": "high"
+    },
+    {
+        "id": "PEDEF0",
+        "name": "Synthetic Patient 565",
+        "age": 88,
+        "sex": "female",
+        "language": "English",
+        "conditions": [
+            "stroke",
+            "diabetes",
+            "cardiovascular disease"
+        ],
+        "medications": [],
+        "functional_status": {
+            "mobility": "bedridden",
+            "cognition": "normal"
+        },
+        "previous_falls": 3,
+        "emergency_contacts": [
+            {
+                "name": "Primary Carer",
+                "relationship": "family",
+                "phone": "0400000000"
+            }
+        ],
+        "risk_level": "high"
+    },
+    {
+        "id": "PFF0AC",
+        "name": "Synthetic Patient 576",
+        "age": 65,
+        "sex": "female",
+        "language": "English",
+        "conditions": [
+            "osteoporosis"
+        ],
+        "medications": [
+            "metformin",
+            "aspirin"
+        ],
+        "functional_status": {
+            "mobility": "assisted",
+            "cognition": "severe impairment"
+        },
+        "previous_falls": 0,
+        "emergency_contacts": [
+            {
+                "name": "Primary Carer",
+                "relationship": "family",
+                "phone": "0400000000"
+            }
+        ],
+        "risk_level": "high"
+    }
+]
