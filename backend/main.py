@@ -1,6 +1,6 @@
 """Watch4U FastAPI entrypoint.
 
-Skeleton only — wire up routers as each teammate ships their component.
+Skeleton only - wire up routers as each teammate ships their component.
 """
 from contextlib import asynccontextmanager
 import logging
@@ -9,7 +9,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.core.config import get_settings
-from app.routers import health
+from app.routers import health, triage
 
 logging.basicConfig(
     level=logging.INFO,
@@ -44,10 +44,10 @@ app.add_middleware(
 )
 
 app.include_router(health.router)
+app.include_router(triage.router, prefix="/api/triage")
 # TODO: include feature routers as they land
 # app.include_router(fall_detection.router, prefix="/api/fall-detection")
 # app.include_router(wifi_detection.router, prefix="/api/wifi-detection")
-# app.include_router(triage.router,         prefix="/api/triage")
 # app.include_router(rag.router,            prefix="/api/rag")
 
 

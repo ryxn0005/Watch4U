@@ -1,0 +1,47 @@
+[
+  {
+    "id": "sample-low-risk",
+    "name": "Mrs Smith",
+    "language": "en",
+    "patient_profile": {
+      "age": 72,
+      "previous_fall_history": false,
+      "stroke_history": false,
+      "cognitive_impairment": false,
+      "limited_mobility": false,
+      "blood_thinner_medication": false,
+      "osteoporosis": false,
+      "lives_alone": false
+    }
+  },
+  {
+    "id": "sample-medium-risk",
+    "name": "Mr Tran",
+    "language": "vi",
+    "patient_profile": {
+      "age": 79,
+      "previous_fall_history": true,
+      "stroke_history": false,
+      "cognitive_impairment": false,
+      "limited_mobility": true,
+      "blood_thinner_medication": false,
+      "osteoporosis": false,
+      "lives_alone": true
+    }
+  },
+  {
+    "id": "sample-high-risk",
+    "name": "Mrs Nguyen",
+    "language": "vi",
+    "patient_profile": {
+      "age": 87,
+      "previous_fall_history": true,
+      "stroke_history": true,
+      "cognitive_impairment": true,
+      "limited_mobility": true,
+      "blood_thinner_medication": true,
+      "osteoporosis": true,
+      "lives_alone": true
+    }
+  }
+]
